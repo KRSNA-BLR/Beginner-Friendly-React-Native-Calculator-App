@@ -8,10 +8,9 @@ import {
   Image,
   ScrollView,
   Dimensions,
-  ScaledSize,    // <-- Importamos el tipo ScaledSize
+  ScaledSize,
 } from 'react-native';
 
-// Definimos la forma del evento que emite Dimensions al rotar
 type DimensionChange = {
   window: ScaledSize;
   screen: ScaledSize;
@@ -21,36 +20,44 @@ function App(): JSX.Element {
   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
 
-  // Manejo de la orientación (opcional si quieres aplicar estilos condicionales)
   const [isPortrait, setIsPortrait] = useState(true);
 
   useEffect(() => {
-    // Especificamos el tipo para el parámetro del callback
     const onChange = ({ window: { width, height } }: DimensionChange) => {
       setIsPortrait(height >= width);
     };
 
-    // Suscribimos el listener al evento de cambio de orientación
     const subscription = Dimensions.addEventListener('change', onChange);
 
-    // Cuando el componente se desmonte, removemos el listener
     return () => {
       subscription.remove();
     };
   }, []);
 
   const handlePress = (value: string) => {
+    if (value === '.' && input.endsWith('.')) {
+      return;
+    }
     setInput(prev => prev + value);
   };
 
   const calculateResult = () => {
     try {
       const sanitizedInput = input
-        .replace(/√/g, 'Math.sqrt')
-        .replace(/\^/g, '**');
+        .replace(/sin\(/g, 'Math.sin((Math.PI/180)*') // Convierte grados a radianes
+        .replace(/cos\(/g, 'Math.cos((Math.PI/180)*') // Convierte grados a radianes
+        .replace(/tan\(/g, 'Math.tan((Math.PI/180)*') // Convierte grados a radianes
+        .replace(/√\(/g, 'Math.sqrt(') // Manejo de raíces cuadradas
+        .replace(/\^/g, '**'); // Manejo de potencias
+
       // eslint-disable-next-line no-eval
       const evalResult = eval(sanitizedInput);
-      setResult(String(evalResult));
+
+      if (isNaN(evalResult) || evalResult === Infinity || evalResult === -Infinity) {
+        setResult('Error');
+      } else {
+        setResult(String(evalResult));
+      }
     } catch (error) {
       setResult('Error');
     }
@@ -63,7 +70,6 @@ function App(): JSX.Element {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* Cabecera con logotipo */}
       <View style={styles.header}>
         <Image
           source={require('./assets/kbasesorias-logo-react-calculadora.png')}
@@ -71,15 +77,12 @@ function App(): JSX.Element {
         />
       </View>
 
-      {/* Pantalla de la calculadora */}
       <View style={styles.screen}>
         <Text style={styles.inputText}>{input}</Text>
         <Text style={styles.resultText}>{result}</Text>
       </View>
 
-      {/* Botones de la calculadora */}
       <ScrollView contentContainerStyle={styles.buttonContainer}>
-        {/* Botones Científicos */}
         <View style={styles.row}>
           <TouchableOpacity style={styles.button} onPress={() => handlePress('sin(')}>
             <Text style={styles.buttonText}>sin</Text>
@@ -90,12 +93,11 @@ function App(): JSX.Element {
           <TouchableOpacity style={styles.button} onPress={() => handlePress('tan(')}>
             <Text style={styles.buttonText}>tan</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={() => handlePress('√')}>
+          <TouchableOpacity style={styles.button} onPress={() => handlePress('√(')}>
             <Text style={styles.buttonText}>√</Text>
           </TouchableOpacity>
         </View>
 
-        {/* Botones Matemáticos */}
         <View style={styles.row}>
           <TouchableOpacity style={styles.button} onPress={() => handlePress('^')}>
             <Text style={styles.buttonText}>^</Text>
@@ -111,7 +113,6 @@ function App(): JSX.Element {
           </TouchableOpacity>
         </View>
 
-        {/* Fila 1 */}
         <View style={styles.row}>
           <TouchableOpacity style={styles.button} onPress={() => handlePress('1')}>
             <Text style={styles.buttonText}>1</Text>
@@ -127,7 +128,6 @@ function App(): JSX.Element {
           </TouchableOpacity>
         </View>
 
-        {/* Fila 2 */}
         <View style={styles.row}>
           <TouchableOpacity style={styles.button} onPress={() => handlePress('4')}>
             <Text style={styles.buttonText}>4</Text>
@@ -143,7 +143,6 @@ function App(): JSX.Element {
           </TouchableOpacity>
         </View>
 
-        {/* Fila 3 */}
         <View style={styles.row}>
           <TouchableOpacity style={styles.button} onPress={() => handlePress('7')}>
             <Text style={styles.buttonText}>7</Text>
@@ -159,13 +158,15 @@ function App(): JSX.Element {
           </TouchableOpacity>
         </View>
 
-        {/* Fila 4 */}
         <View style={styles.row}>
           <TouchableOpacity style={styles.button} onPress={clearInput}>
             <Text style={styles.buttonText}>C</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.button} onPress={() => handlePress('0')}>
             <Text style={styles.buttonText}>0</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => handlePress('.')}>
+            <Text style={styles.buttonText}>.</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.button} onPress={calculateResult}>
             <Text style={styles.buttonText}>=</Text>
