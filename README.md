@@ -1,6 +1,6 @@
 # Beginner-Friendly React Native Calculator App
 
-![App Preview](./assets/app-preview.png)
+![App Preview](https://github.com/KRSNA-BLR/Beginner-Friendly-React-Native-Calculator-App/blob/main/assets/Beginner-Friendly-React-Native-Calculator-App-Kbasesorias-Danilo-Viteri.png)
 
 ## 🌟 Overview
 
