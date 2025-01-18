@@ -109,6 +109,7 @@ For more detailed information, refer to the following documents:
 - [Technical Manual](https://github.com/KRSNA-BLR/Beginner-Friendly-React-Native-Calculator-App/blob/main/TECHNICAL_MANUAL.md): In-depth explanation of the project's structure and components.
 - [Installation Guide](https://github.com/KRSNA-BLR/Beginner-Friendly-React-Native-Calculator-App/blob/main/INSTALLATION_GUIDE.md): Step-by-step guide to set up the project.
 - [Developer Setup Guide](https://github.com/KRSNA-BLR/Beginner-Friendly-React-Native-Calculator-App/blob/main/DEVELOPER_SETUP.md): Instructions to configure your development environment.
+- [Guía en Español](https://github.com/KRSNA-BLR/Beginner-Friendly-React-Native-Calculator-App/blob/main/README_ES.md): Versión en español del README.
 
 ---
 
