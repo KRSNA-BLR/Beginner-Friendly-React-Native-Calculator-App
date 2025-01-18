@@ -17,10 +17,10 @@ Este proyecto tiene como objetivo:
 ## 🚀 Características
 
 - 🧮 **Operaciones Aritméticas Básicas**: Realiza sumas, restas, multiplicaciones y divisiones.
-- 🧪 **Funciones Científicas**: Soporte para funciones como `sin`, `cos`, `tan`, `log` y raíz cuadrada.
+- 🧪 **Funciones Científicas**: Soporte para funciones como sin, cos, tan, log y raíz cuadrada.
 - 📱 **Diseño Responsivo**: Optimizado para varias dimensiones de pantalla y orientaciones.
 - 🔧 **Código Amigable para Principiantes**: Código bien estructurado y comentado para facilitar el aprendizaje.
-- 🎨 **Interfaz Personalizable**: Estilizado con `StyleSheet` para una fácil personalización y tematización.
+- 🎨 **Interfaz Personalizable**: Estilizado con StyleSheet para una fácil personalización y tematización.
 - 🌍 **Multiplataforma**: Funciona sin problemas tanto en dispositivos Android como iOS.
 - 🚀 **Ligero y Rápido**: Rendimiento eficiente con un uso mínimo de recursos.
 
@@ -70,7 +70,7 @@ Asegúrate de tener instalados los siguientes elementos:
 
 5. **Probar en Expo Go (opcional)**
    - Instala la [Expo Go](https://expo.dev/client) app en tu teléfono.
-   - Escanea el código QR generado por `npm start`.
+   - Escanea el código QR generado por npm start.
 
 ---
 
@@ -106,9 +106,10 @@ Beginner-Friendly-React-Native-Calculator-App/
 
 Para más información detallada, consulta los siguientes documentos:
 
-- [Manual Técnico](https://github.com/KRSNA-BLR/Beginner-Friendly-React-Native-Calculator-App/blob/main/TECHNICAL_MANUAL.md): Explicación detallada de la estructura y componentes del proyecto.
-- [Guía de Instalación](https://github.com/KRSNA-BLR/Beginner-Friendly-React-Native-Calculator-App/blob/main/INSTALLATION_GUIDE.md): Guía paso a paso para configurar el proyecto.
-- [Guía de Configuración para Desarrolladores](https://github.com/KRSNA-BLR/Beginner-Friendly-React-Native-Calculator-App/blob/main/DEVELOPER_SETUP.md): Instrucciones para configurar tu entorno de desarrollo.
+- [Manual Técnico](https://github.com/KRSNA-BLR/Beginner-Friendly-React-Native-Calculator-App/blob/main/TECHNICAL_MANUAL_ES.md): Explicación detallada de la estructura y componentes del proyecto.
+- [Guía de Instalación](https://github.com/KRSNA-BLR/Beginner-Friendly-React-Native-Calculator-App/blob/main/INSTALLATION_GUIDE_ES.md): Guía paso a paso para configurar el proyecto.
+- [Guía de Configuración para Desarrolladores](https://github.com/KRSNA-BLR/Beginner-Friendly-React-Native-Calculator-App/blob/main/DEVELOPER_SETUP_ES.md): Instrucciones para configurar tu entorno de desarrollo.
+- [Developer Setup Guide (English)](https://github.com/KRSNA-BLR/Beginner-Friendly-React-Native-Calculator-App/blob/main/README.md): Versión en inglés de la documentación.
 
 ---
 
@@ -117,9 +118,9 @@ Para más información detallada, consulta los siguientes documentos:
 ¡Las contribuciones son bienvenidas! Para contribuir:
 
 1. Haz un fork de este repositorio.
-2. Crea una nueva rama: `git checkout -b feature/YourFeature`.
-3. Realiza tus cambios: `git commit -m 'Add YourFeature'`.
-4. Sube los cambios a tu rama: `git push origin feature/YourFeature`.
+2. Crea una nueva rama: git checkout -b feature/YourFeature.
+3. Realiza tus cambios: git commit -m 'Add YourFeature'.
+4. Sube los cambios a tu rama: git push origin feature/YourFeature.
 5. Abre un pull request.
 
 Para cambios importantes, abre primero un issue para discutir lo que te gustaría cambiar.
