@@ -1,0 +1,259 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI Snapshot Tests Button Component renders function button correctly 1`] = `
+<View
+  accessibilityLabel="function"
+  testID="button-sin"
+>
+  <Text>
+    sin
+  </Text>
+</View>
+`;
+
+exports[`UI Snapshot Tests Button Component renders number button correctly 1`] = `
+<View
+  accessibilityLabel="number"
+  testID="button-5"
+>
+  <Text>
+    5
+  </Text>
+</View>
+`;
+
+exports[`UI Snapshot Tests Button Component renders operator button correctly 1`] = `
+<View
+  accessibilityLabel="operator"
+  testID="button-+"
+>
+  <Text>
+    +
+  </Text>
+</View>
+`;
+
+exports[`UI Snapshot Tests Button Component renders special button correctly 1`] = `
+<View
+  accessibilityLabel="special"
+  testID="button-C"
+>
+  <Text>
+    C
+  </Text>
+</View>
+`;
+
+exports[`UI Snapshot Tests Calculator Layout renders button grid layout 1`] = `
+<View
+  testID="button-grid"
+>
+  <View
+    accessibilityLabel="number"
+    testID="button-7"
+  >
+    <Text>
+      7
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="number"
+    testID="button-8"
+  >
+    <Text>
+      8
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="number"
+    testID="button-9"
+  >
+    <Text>
+      9
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="number"
+    testID="button-÷"
+  >
+    <Text>
+      ÷
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="number"
+    testID="button-4"
+  >
+    <Text>
+      4
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="number"
+    testID="button-5"
+  >
+    <Text>
+      5
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="number"
+    testID="button-6"
+  >
+    <Text>
+      6
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="number"
+    testID="button-×"
+  >
+    <Text>
+      ×
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="number"
+    testID="button-1"
+  >
+    <Text>
+      1
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="number"
+    testID="button-2"
+  >
+    <Text>
+      2
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="number"
+    testID="button-3"
+  >
+    <Text>
+      3
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="number"
+    testID="button--"
+  >
+    <Text>
+      -
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="number"
+    testID="button-0"
+  >
+    <Text>
+      0
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="number"
+    testID="button-."
+  >
+    <Text>
+      .
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="number"
+    testID="button-="
+  >
+    <Text>
+      =
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="number"
+    testID="button-+"
+  >
+    <Text>
+      +
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`UI Snapshot Tests Display Component renders display with error 1`] = `
+<View
+  testID="display"
+>
+  <Text
+    testID="input-text"
+  >
+    1/0
+  </Text>
+  <Text
+    testID="result-text"
+  >
+    Error
+  </Text>
+</View>
+`;
+
+exports[`UI Snapshot Tests Display Component renders display with input correctly 1`] = `
+<View
+  testID="display"
+>
+  <Text
+    testID="input-text"
+  >
+    5+3
+  </Text>
+  <Text
+    testID="result-text"
+  />
+</View>
+`;
+
+exports[`UI Snapshot Tests Display Component renders display with long expression 1`] = `
+<View
+  testID="display"
+>
+  <Text
+    testID="input-text"
+  >
+    123+456*789/10
+  </Text>
+  <Text
+    testID="result-text"
+  >
+    35426.4
+  </Text>
+</View>
+`;
+
+exports[`UI Snapshot Tests Display Component renders display with result correctly 1`] = `
+<View
+  testID="display"
+>
+  <Text
+    testID="input-text"
+  >
+    5+3
+  </Text>
+  <Text
+    testID="result-text"
+  >
+    8
+  </Text>
+</View>
+`;
+
+exports[`UI Snapshot Tests Display Component renders empty display correctly 1`] = `
+<View
+  testID="display"
+>
+  <Text
+    testID="input-text"
+  />
+  <Text
+    testID="result-text"
+  />
+</View>
+`;

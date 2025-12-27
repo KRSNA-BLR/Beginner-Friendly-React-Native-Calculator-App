@@ -1,0 +1,55 @@
+# Dependabot Configuration
+# Automatically checks for dependency updates
+
+version: 2
+updates:
+  # NPM dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "America/Guayaquil"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "KRSNA-BLR"
+    labels:
+      - "dependencies"
+      - "npm"
+    commit-message:
+      prefix: "⬆️ deps:"
+    groups:
+      react-native:
+        patterns:
+          - "react-native*"
+          - "@react-native*"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react*"
+      testing:
+        patterns:
+          - "jest*"
+          - "@jest/*"
+          - "@testing-library/*"
+      linting:
+        patterns:
+          - "eslint*"
+          - "prettier*"
+          - "@typescript-eslint/*"
+      types:
+        patterns:
+          - "@types/*"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "⬆️ ci:"

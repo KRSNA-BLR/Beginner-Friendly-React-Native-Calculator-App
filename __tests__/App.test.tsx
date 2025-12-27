@@ -4,14 +4,33 @@
 
 import 'react-native';
 import React from 'react';
-import App from '../App';
+import { render } from '@testing-library/react-native';
+import App from '../src/App';
 
 // Note: import explicitly to use the types shipped with jest.
-import {it} from '@jest/globals';
+import { it, describe, expect } from '@jest/globals';
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
+describe('App', () => {
+  it('renders correctly', () => {
+    const { getByText } = render(<App />);
+    // The calculator should have a C button
+    expect(getByText('C')).toBeTruthy();
+  });
 
-it('renders correctly', () => {
-  renderer.create(<App />);
+  it('renders theme toggle button', () => {
+    const { getByText } = render(<App />);
+    // Should have either sun or moon emoji for theme toggle
+    const toggleButton = getByText(/☀️|🌙/);
+    expect(toggleButton).toBeTruthy();
+  });
+
+  it('renders clear button', () => {
+    const { getByText } = render(<App />);
+    expect(getByText('C')).toBeTruthy();
+  });
+
+  it('renders equals button', () => {
+    const { getByText } = render(<App />);
+    expect(getByText('=')).toBeTruthy();
+  });
 });
