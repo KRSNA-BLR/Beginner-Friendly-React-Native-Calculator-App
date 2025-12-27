@@ -188,25 +188,17 @@ graph LR
 ```mermaid
 stateDiagram-v2
     [*] --> DetectingSystem
-    DetectingSystem --> DarkTheme: System = Dark
-    DetectingSystem --> LightTheme: System = Light
+    DetectingSystem --> LightTheme : System = Light
+    DetectingSystem --> DarkTheme : System = Dark
     
-    LightTheme --> DarkTheme: Toggle 🌙
-    DarkTheme --> LightTheme: Toggle ☀️
+    LightTheme --> DarkTheme : Toggle 🌙
+    DarkTheme --> LightTheme : Toggle ☀️
     
-    state LightTheme {
-        [*] --> LightColors
-        LightColors: background: #f5f5f5
-        LightColors: text: #333333
-        LightColors: buttons: #ffffff
-    }
+    LightTheme : ☀️ Light Mode
+    LightTheme : bg #f5f5f5 | text #333
     
-    state DarkTheme {
-        [*] --> DarkColors
-        DarkColors: background: #1a1a2e
-        DarkColors: text: #ffffff
-        DarkColors: buttons: #16213e
-    }
+    DarkTheme : 🌙 Dark Mode
+    DarkTheme : bg #1a1a2e | text #fff
 ```
 
 ---
