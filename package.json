@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "mathjs": "^15.1.0",
-    "react": "19.0.0",
+    "react": "19.2.3",
     "react-native": "0.78.0"
   },
   "devDependencies": {
