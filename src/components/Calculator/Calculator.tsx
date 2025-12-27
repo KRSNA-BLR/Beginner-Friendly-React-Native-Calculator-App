@@ -1,7 +1,7 @@
 /**
  * Main Calculator Component
  * @author Danilo Viteri - KB Asesorías
- * 
+ *
  * Responsive layout:
  * - Portrait: Basic calculator (5 rows x 4 columns)
  * - Landscape: Scientific calculator (6 rows x 6 columns)
@@ -40,7 +40,7 @@ const Calculator: React.FC = () => {
   const buttonSize = useMemo(() => {
     const statusBarHeight = Platform.OS === 'android' ? StatusBar.currentHeight || 24 : 0;
     const safeHeight = height - statusBarHeight;
-    
+
     if (isLandscape) {
       // Landscape: 6 columns, 6 rows
       const columns = 6;
@@ -48,15 +48,15 @@ const Calculator: React.FC = () => {
       const horizontalPadding = spacing.md * 2;
       const verticalPadding = spacing.sm * 2;
       const buttonGap = 8;
-      
+
       // Right panel takes ~60% of width
       const rightPanelWidth = width * 0.6;
       const availableWidth = rightPanelWidth - horizontalPadding - (columns * buttonGap);
       const availableHeight = safeHeight - verticalPadding - (rows * buttonGap);
-      
+
       const maxByWidth = availableWidth / columns;
       const maxByHeight = availableHeight / rows;
-      
+
       return Math.min(maxByWidth, maxByHeight, 60);
     } else {
       // Portrait: 4 columns, 5 rows
@@ -64,15 +64,15 @@ const Calculator: React.FC = () => {
       const rows = 5;
       const horizontalPadding = spacing.md * 2;
       const buttonGap = 8;
-      
+
       // Buttons take ~55% of height
       const buttonsHeight = safeHeight * 0.55;
       const availableWidth = width - horizontalPadding - (columns * buttonGap);
       const availableHeight = buttonsHeight - (rows * buttonGap);
-      
+
       const maxByWidth = availableWidth / columns;
       const maxByHeight = availableHeight / rows;
-      
+
       return Math.min(maxByWidth, maxByHeight, 85);
     }
   }, [width, height, isLandscape]);
@@ -81,14 +81,14 @@ const Calculator: React.FC = () => {
   const buttonRows = isLandscape ? LANDSCAPE_ROWS : PORTRAIT_ROWS;
 
   return (
-    <SafeAreaView 
+    <SafeAreaView
       style={[styles.container, { backgroundColor: colors.background }]}
     >
-      <StatusBar 
+      <StatusBar
         barStyle={isDark ? 'light-content' : 'dark-content'}
         backgroundColor={colors.background}
       />
-      
+
       {isLandscape ? (
         // Landscape Layout - Scientific Calculator
         <View style={styles.landscapeContainer}>

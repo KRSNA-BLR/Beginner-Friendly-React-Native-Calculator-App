@@ -6,7 +6,6 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
 import { Text, View } from 'react-native';
-import { ThemeProvider } from '../src/hooks/useTheme';
 
 // Mock component for Display testing
 const MockDisplay: React.FC<{ input: string; result: string }> = ({ input, result }) => (

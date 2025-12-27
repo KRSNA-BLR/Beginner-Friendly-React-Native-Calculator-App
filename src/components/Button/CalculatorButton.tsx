@@ -97,14 +97,14 @@ const CalculatorButton: React.FC<CalculatorButtonProps> = ({
   };
 
   const backgroundColor = getButtonColor(type, colors);
-  
+
   // Calculate button dimensions
   const gap = 8;
   const buttonWidth = wide ? (buttonSize * 2) + gap : buttonSize;
   const buttonHeight = buttonSize;
-  
+
   // Dynamic font size based on button size and landscape mode
-  const fontSize = isLandscape 
+  const fontSize = isLandscape
     ? Math.max(12, Math.min(16, buttonSize * 0.35))
     : Math.max(16, Math.min(24, buttonSize * 0.4));
 
@@ -112,7 +112,7 @@ const CalculatorButton: React.FC<CalculatorButtonProps> = ({
     <Animated.View
       style={[
         styles.buttonWrapper,
-        { 
+        {
           width: buttonWidth,
           height: buttonHeight,
           transform: [{ scale: scaleValue }],
@@ -133,9 +133,9 @@ const CalculatorButton: React.FC<CalculatorButtonProps> = ({
         disabled={disabled}
         testID={testID}
       >
-        <Text 
+        <Text
           style={[
-            styles.buttonText, 
+            styles.buttonText,
             { fontSize },
             textStyle,
           ]}

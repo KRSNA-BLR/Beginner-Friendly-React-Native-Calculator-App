@@ -1,7 +1,7 @@
 /**
  * Button configuration for the Calculator
  * @author Danilo Viteri - KB Asesorías
- * 
+ *
  * PORTRAIT: Basic calculator (5 rows x 4 columns)
  * LANDSCAPE: Scientific calculator (6 rows x 6 columns)
  */
