@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "mathjs": "^15.1.0",
-    "react": "19.0.0",
+    "react": "19.2.3",
     "react-native": "0.78.0"
   },
   "devDependencies": {
@@ -57,7 +57,7 @@
     "@react-native/typescript-config": "0.78.0",
     "@testing-library/react-native": "^13.3.3",
     "@types/jest": "^30.0.0",
-    "@types/react": "^19.0.0",
+    "@types/react": "^19.2.8",
     "@types/react-test-renderer": "^18.3.0",
     "babel-jest": "^29.7.0",
     "eslint": "^8.57.0",
